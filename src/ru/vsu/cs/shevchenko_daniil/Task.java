@@ -8,10 +8,6 @@ import java.util.Scanner;
 
 public class Task {
 
-    /*public static String selectAllNumbersIntoString(String string) {
-        return string.replaceAll("\\D+", " ");
-    }*/
-
     public static String selectAllNumbers(String string) {
         String newString = null;
 

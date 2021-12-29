@@ -227,8 +227,7 @@ public class ArrayUtils {
                 System.out.printf("Введите массив%s:%n", arrName);
                 String line = scanner.nextLine();
                 return toIntArray(line);
-            }
-            catch(Exception e) {
+            } catch (Exception e) {
                 System.out.print("Вы ошиблись, попробуйте еще раз! ");
             }
         }
@@ -250,8 +249,7 @@ public class ArrayUtils {
                 System.out.printf("Введите массив%s:%n", arrName);
                 String line = scanner.nextLine();
                 return toDoubleArray(line);
-            }
-            catch(Exception e) {
+            } catch (Exception e) {
                 System.out.print("Вы ошиблись, попробуйте еще раз! ");
             }
         }
@@ -367,8 +365,7 @@ public class ArrayUtils {
                         }
                 }
                 return arr2;
-            }
-            catch(Exception e) {
+            } catch (Exception e) {
                 System.out.print("Вы ошиблись, попробуйте еще раз! ");
             }
         }
@@ -416,8 +413,7 @@ public class ArrayUtils {
                         }
                 }
                 return arr2;
-            }
-            catch(Exception e) {
+            } catch (Exception e) {
                 System.out.print("Вы ошиблись, попробуйте еще раз! ");
             }
         }
@@ -504,8 +500,7 @@ public class ArrayUtils {
     public static int[] readIntArrayFromFile(String fileName) {
         try {
             return toIntArray(readLinesFromFile(fileName)[0]);
-        }
-        catch(FileNotFoundException e) {
+        } catch (FileNotFoundException e) {
             return null;
         }
     }
@@ -516,8 +511,7 @@ public class ArrayUtils {
     public static double[] readDoubleArrayFromFile(String fileName) {
         try {
             return toDoubleArray(readLinesFromFile(fileName)[0]);
-        }
-        catch(FileNotFoundException e) {
+        } catch (FileNotFoundException e) {
             return null;
         }
     }
@@ -528,8 +522,7 @@ public class ArrayUtils {
     public static int[][] readIntArray2FromFile(String fileName) {
         try {
             return toIntArray2(readLinesFromFile(fileName));
-        }
-        catch(FileNotFoundException e) {
+        } catch (FileNotFoundException e) {
             return null;
         }
     }
@@ -537,8 +530,7 @@ public class ArrayUtils {
     public static double[][] readDoubleArray2FromFile(String fileName) {
         try {
             return toDoubleArray2(readLinesFromFile(fileName));
-        }
-        catch(FileNotFoundException e) {
+        } catch (FileNotFoundException e) {
             return null;
         }
     }
@@ -593,7 +585,8 @@ public class ArrayUtils {
 
     /**
      * Cоздание одномерного массива целых чисел, заполненного случайными числами
-     * @param length Кол-во элементов в массиве
+     *
+     * @param length   Кол-во элементов в массиве
      * @param minValue Минимальное значение для случайных чисел (включая)
      * @param maxValue Максимальное значение (не включая)
      * @return Массив int[]
@@ -614,6 +607,7 @@ public class ArrayUtils {
 
     /**
      * Cоздание двухмерного массива целых чисел, заполненного случайными числами
+     *
      * @param rowCount Кол-во сток в двумерном массиве
      * @param colCount Кол-во столбцов (элементов в каждой строке)
      * @param minValue Минимальное значение для случайных чисел (включая)
