@@ -3,15 +3,30 @@ package ru.vsu.cs.shevchenko_daniil;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        //Писать цифры для проверки через запятую
-        Tests.test("test1.txt", "28, 1914, 11, 1918, 28, 1914, 70, 60, 9, 10, 7, 12, 1, 7, 8, 55, 9, 1917, 1918, 10");
-        Tests.test("test2.txt", "2017, 34, 2020, 26,9");
-        Tests.test("test3.txt", "23, 1995, 2, 2020, 2021");
-        Tests.test("test4.txt", "1942, 10, 2,5, 100, 30, 5.5, 11, 424, 330, 13, 15");
-        Tests.test("test5.txt", "0.5, 10, 6, 2, 2.5, 10, 15, 1101, 2, 10, 11");
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Запустить тесты?");
+        String userEnter = sc.nextLine();
+        boolean noFlag = false;
+        if (userEnter.equals("Да") || userEnter.equals("да") || userEnter.equals("Yes") || userEnter.equals("yes")) {
+            Test.tests();
+            System.out.println("Желаете числа в собственном тексте?");
+        } else if (userEnter.equals("Нет") || userEnter.equals("нет") || userEnter.equals("no") || userEnter.equals("No")) {
+            noFlag = true;
+            System.out.println("Желаете числа в собственном тексте?");
+        } else {
+            System.out.println("Некорректный ввод");
+        }
+            userEnter = sc.nextLine();
+        if (userEnter.equals("Да") || userEnter.equals("да") || userEnter.equals("Yes") || userEnter.equals("yes")) {
+            System.out.println("Введите текст в одну строку");
+            String userString = sc.nextLine();
+            System.out.println(Task.selectAllNumbers(userString) + "\nПрограмма завершила свою работу");
+        } else System.out.print("Программа завершила свою работу");
     }
 }
